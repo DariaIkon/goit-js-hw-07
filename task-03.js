@@ -18,25 +18,21 @@ const images = [
 
 const imagesGallery = document.querySelector('#gallery');
 
-const makeImagesMarkUp = elements => {
-  const { url, alt } = elements;
-
+const makeImagesMarkUp = ({ url, alt }) => {
   return `
-  <li>
-  <img
-  class = 'picture'
-  url = ${url}
-  alt = ${alt}
-  >
-  </img>
-  </li>
-  `; 
-};
+  <li class = "imgGallery">
+<img
+class = "pictures"
+src="${url}"
+ alt = "${alt}"
+ width = 640
+ >
+ </li>
+ `;
+}
 
 const imageEl = images.map(makeImagesMarkUp).join('');
-// console.log(picturesEl);
 
 imagesGallery.insertAdjacentHTML("afterbegin", imageEl);
-console.log(imagesGallery);
- 
+console.log(imageEl);
 

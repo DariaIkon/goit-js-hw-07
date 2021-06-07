@@ -6,25 +6,25 @@
 // если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
-const input = document.querySelector('#validation-input');
+const inputEl = document.querySelector('#validation-input');
 
 
-input.addEventListener('blur', changeInputBorder);
-
-function changeInputBorder(event) {
-
-    if (event.currentTarget.value.length === Number(input.dataset.length)) {
+inputEl.addEventListener('blur', changeInputBorder => {
+    
+ if (changeInputBorder.currentTarget.value.length === Number(inputEl.dataset.length)) {
             
-        input.classList.add('valid');
+        inputEl.classList.add('valid');
        
     } else {
         
-        input.classList.remove('valid');
-        input.classList.add('invalid');  
-    }
-     return;
+        inputEl.classList.remove('valid');
+        inputEl.classList.add('invalid');  
+ }
+    console.log(inputEl);
+    
+});
 
-};
+
     
    
 

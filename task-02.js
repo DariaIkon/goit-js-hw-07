@@ -17,7 +17,7 @@ ingredients.forEach((user) => {
     const liElem = document.createElement('li');
     liElem.classList.add('menu-item');
     liElem.textContent = user;
-    ulEl.appendChild(liElem);
+    ulEl.append(liElem);
 
 });
 console.log(ulEl);
